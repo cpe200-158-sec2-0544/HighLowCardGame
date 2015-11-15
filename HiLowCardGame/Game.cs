@@ -8,10 +8,10 @@ namespace HiLowCardGame
 {
     class Game
     {
-        Deck _game = new Deck();
-        bool _end = false;
-        Players _player1 = new Players();
-        Players _player2 = new Players();
+        private Deck _game = new Deck();
+        private bool _end = false;
+        private Players _player1 = new Players();
+        private Players _player2 = new Players();
         public void ComparedCard(Cards c1, Cards c2)
         {
             Cards c11, c22;
@@ -49,7 +49,7 @@ namespace HiLowCardGame
                     if (c11.Rank == c22.Rank)
                     {
                         Console.WriteLine("Cards have same rank : " + c11.Rank);
-                        Console.WriteLine("Add cards back and sufful....");
+                        Console.WriteLine("Add cards back and shuffle....");
                         _game.AddCard(c11);
                         _game.AddCard(c22);
                         _game.AddCard(c1);
